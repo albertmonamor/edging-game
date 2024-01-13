@@ -1,0 +1,240 @@
+
+
+body{
+    /* background: linear-gradient(to left, rgb(83, 34, 68), rgb(84, 38, 78)); */
+    background: radial-gradient(circle at center, rgb(173, 80, 145), rgb(70, 32, 65));
+    margin: 0 !important; 
+    transition: 400ms background;
+    
+}
+
+.title{
+    color:rgb(234, 99, 180) ;
+    text-align: center;
+}
+.home{
+    margin-bottom: 3rem;
+}
+.head{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.welcome{
+    border-radius: 7px;
+    background: linear-gradient(rgb(33, 14, 34),rgb(40, 28, 41)) ;
+    padding: 10px 7rem;
+    animation: welcome 500ms;
+    box-shadow: 0 0 11px 0 rgba(0,0,0,0.7);
+}
+
+.welcome-icon{
+    padding: 10px;
+    border-radius: 7px;
+    background: linear-gradient(rgb(33, 14, 34),rgb(40, 28, 41)) ;
+    font-size: 4.1rem;
+    color: aliceblue;
+    animation: welcome 200ms;
+}
+
+
+.wel-body{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    
+}
+
+.wel-body > .start{
+    padding: 10px;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu{
+    animation: welcome 1000ms;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.237);
+    padding: 20px; 
+    border-radius: 8px;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.737);
+}
+
+.icon-menu{
+    background: transparent;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.737);
+    color: aliceblue;
+    padding: 12px;
+    margin-right: -3px;
+}
+
+.menu > .item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu>.item>.label{
+    margin-bottom: 3rem;
+}
+.label-menu{
+    padding: 10px;
+    background: rgb(62, 37, 63);
+    color: aliceblue;
+    border-radius: 0px 7px 7px 0px;
+}
+
+.label-item{
+    background: rgb(54, 24, 55);
+    padding: 10px 20px;
+    border-radius:10px 0 0px 10px;
+    color: aliceblue;
+    text-align: left;
+}
+
+.select-item{
+    background: rgb(0,0,0);
+    outline: none;
+    border: 0;
+    color: rgb(251, 233, 245);
+}
+.btn-start{
+    transform: skew(-10deg);
+    background: rgb(54, 24, 55) !important;
+    color: rgb(234, 99, 190);
+    box-shadow: 0 0 11px 0 rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 0;
+    transition:400ms;
+    font-weight: bold;
+    font-family: 'Chakra Petch';
+    font-size: 2rem;
+    animation: welcome 1500ms;
+    
+}
+.btn-start:hover, 
+.btn-start:active{
+    transform: skew(-10deg) scale(1.2);
+    background: rgb(33, 14, 34) !important;
+    color: rgb(234, 99, 190);
+    border-left: 1px solid rgb(88, 61, 79);
+}
+
+.body-game{
+    display: none;
+    margin-top: 4rem;
+}
+
+.body-game > .body{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.737);
+    
+}
+
+
+.bar-item{
+    position: relative;
+    width: 30%;
+}
+.p-bar{
+    background: transparent;
+}
+progress.status::-webkit-progress-value{
+    background: linear-gradient(to right, rgb(205, 199, 199), rgb(131, 61, 193));
+}
+
+.p-bar-cum{
+    margin-left: 5px;
+    color: aliceblue;
+}
+progress.p-bar-cum::-webkit-progress-value{
+    background: linear-gradient(to right,rgba(131, 61, 193, 0.744),  rgba(173, 64, 173, 0.47));
+}
+.p-bar-text{
+    position: absolute;
+    color: aliceblue;
+    left: 40%;
+    top: 30%;
+}
+
+@keyframes p-bar-animation{
+    
+    0%{
+        box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.737);
+    }
+    50%{
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.737);
+    }
+    100%{
+        box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.737);
+    }
+}
+
+
+
+.mrgn20{
+    margin-right: 20%;
+    margin-left: 20%;
+    width: auto;
+    height: auto;
+}
+
+
+ /* welcome */
+@keyframes welcome {
+    0%{
+        transform: scale(0.1);
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    
+}
+
+@media screen and (max-width:1000px) {
+    body{
+        background: linear-gradient(to left, rgb(173, 80, 145), rgb(70, 32, 65));
+    }
+
+    .mrgn10{
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .head{
+        padding: 0;
+        margin: 5px !important;
+    }
+    .welcome{
+        padding: 10px;
+    }
+    .welcome-icon{
+        display: none;
+        
+    }
+    
+}
+
+.timeBarContainer{
+
+    background-color: black;
+
+}
+
+.timeLeft{
+    background-color: rgb(234, 99, 190);;
+}
+
+
